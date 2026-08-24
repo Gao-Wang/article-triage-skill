@@ -6,7 +6,7 @@
 //   node readeck.mjs note <id> "备注内容"               # 更新备注（存摘要+评分+理由）
 //   node readeck.mjs delete <id>                       # 删除书签
 //   node readeck.mjs list --label 标签 [--since 7d]     # 按标签/时间列书签（校准用）
-// 凭据: 环境变量 READEK_URL / READEK_TOKEN，或 ~/.hermes/.env
+// 凭据: 环境变量 READECK_URL / READECK_TOKEN，或 ~/.hermes/.env
 
 import fs from "node:fs";
 import os from "node:os";
@@ -32,15 +32,15 @@ function loadEnv() {
 }
 
 const env = loadEnv();
-const BASE = (env.READEK_URL || "").replace(/\/$/, "");
-const TOKEN = env.READEK_TOKEN || "";
+const BASE = (env.READECK_URL || "").replace(/\/$/, "");
+const TOKEN = env.READECK_TOKEN || "";
 
 if (!BASE) {
-  console.error("缺少 READEK_URL（~/.hermes/.env 或环境变量）");
+  console.error("缺少 READECK_URL（~/.hermes/.env 或环境变量）");
   process.exit(1);
 }
 if (!TOKEN) {
-  console.error("缺少 READEK_TOKEN（~/.hermes/.env 或环境变量）");
+  console.error("缺少 READECK_TOKEN（~/.hermes/.env 或环境变量）");
   process.exit(1);
 }
 

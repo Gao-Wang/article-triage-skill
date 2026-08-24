@@ -3,6 +3,10 @@
 > 把链接丢给 Agent，让它替你"读 + 判断 + 归档"：抓取内容 → 生成摘要 →
 > 按你的兴趣画像打分（0–10）→ 存入 Readeck（多维标签）→ 回复一屏总结。
 
+> 📌 **所有文章 / 项目都会收藏到你自己部署的 [Readeck](https://readeck.org)（自托管稍后读服务）**：
+> 打分后自动写入 Readeck 书签，带上内容域 + 优先级 + 硬件匹配等多维标签，
+> 附上摘要、评分与理由（存于书签备注），随时可在 Readeck 网页中按标签查阅。
+
 ## 它解决什么问题
 
 刷到喜欢的文章（微信公众号 / GitHub 开源项目 / AI 玩法）时，没时间立即尝试，
@@ -42,6 +46,7 @@
 - ✅ **裸链接自动触发**：发链接就全流程执行，无需点名技能
 - ✅ **去重**：已存过的链接自动识别，不产生重复条目，可重新评估
 - ✅ **静默执行**：回复只展示结论，不暴露命令/代码/脚本细节
+- ✅ **收藏到 Readeck**：文章/项目统一归档进你的 Readeck 书签库，多维标签 + 备注评分理由，可在 Readeck 中检索
 - ✅ **每周校准**：说"校准"，Agent 基于 Readeck 强信号（打星/note/标签/删除）提出画像修改建议，你确认后生效、可回滚
 - ✅ **隐私优先**：凭据走环境变量，不写死在代码里
 - ✅ **标准兼容**：遵循 [agentskills.io](https://agentskills.io) 规范，可在 Hermes / Claude Code 等支持 SKILL.md 的 Agent 间迁移
@@ -78,7 +83,7 @@ cp USER.example.md ~/.hermes/memories/USER.md                      # 全局触�
 ### 3. 配置凭据（`~/.hermes/.env`，权限 600）
 
 ```bash
-echo -e "\n# article-triage skill: Readeck API\nREADEK_URL=http://<你的Readeck地址>:8080\nREADEK_TOKEN=<你的Readeck令牌>" >> ~/.hermes/.env
+echo -e "\n# article-triage skill: Readeck API\nREADECK_URL=http://<你的Readeck地址>:8080\nREADECK_TOKEN=<你的Readeck令牌>" >> ~/.hermes/.env
 chmod 600 ~/.hermes/.env
 ```
 

@@ -15,7 +15,7 @@ metadata:
 
 ## 环境
 
-- Readeck API：`$READEK_URL`（必填，如 `http://<readeck-host>:8080`），认证头 `Authorization: Bearer $READEK_TOKEN`
+- Readeck API：`$READECK_URL`（必填，如 `http://<readeck-host>:8080`），认证头 `Authorization: Bearer $READECK_TOKEN`
 - 辅助脚本：`scripts/readeck.mjs`（封装去重/创建/备注/删除/按标签查询）
 - 兴趣画像：`profile.md`（本目录）
 
@@ -64,6 +64,6 @@ metadata:
 
 ## 注意事项
 
-- 凭据一律走环境变量（`READEK_URL` / `READEK_TOKEN`），不写死在技能里。
+- 凭据一律走环境变量（`READECK_URL` / `READECK_TOKEN`），不写死在技能里。
 - 尊重去重；抓取失败跳过并告知。
 - 回复保持简洁中文，不堆砌；绝不出现命令、代码、脚本路径或实现细节，只输出用户能直接看懂的结果。
