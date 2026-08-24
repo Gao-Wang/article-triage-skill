@@ -15,7 +15,7 @@ metadata:
 
 ## 环境
 
-- Readeck API：`$READEK_URL`（默认 `http://192.168.0.10:8080`），认证头 `Authorization: Bearer $READEK_TOKEN`
+- Readeck API：`$READEK_URL`（必填，如 `http://<readeck-host>:8080`），认证头 `Authorization: Bearer $READEK_TOKEN`
 - 辅助脚本：`scripts/readeck.mjs`（封装去重/创建/备注/删除/按标签查询）
 - 兴趣画像：`profile.md`（本目录）
 
@@ -41,14 +41,14 @@ metadata:
 ## 评分标准
 
 - 基础分由与画像兴趣域的匹配度决定（见 `profile.md`）。
-- **加分**：手头机器能跑（Mac mini M4 / Ubuntu+4080）、上手成本低、与用户当前工作相关、GitHub star 高且维护活跃。
+- **加分**：手头机器能跑（见 `profile.md` 硬件环境）、上手成本低、与用户当前工作相关、GitHub star 高且维护活跃。
 - **减分**：与兴趣域无关、依赖太重、需专用硬件、内容过时。
 - **档位**：≥8 → `#高优先`；4–7 → `#稍后读`；<4 → `#归档`（**低分也照常保存**）。
 - 输出：整数分 + 一句话理由。
 
 ## 标签体系
 
-- **内容域**：`#医学影像` `#大模型` `#mac工具` `#Agent技能` `#硬件/部署` `#其他`
+- **内容域**：`#AI` `#编程` `#工具` `#Agent技能` `#硬件/部署` `#其他`（可按用户领域自定义）
 - **优先级**：`#高优先` `#稍后读` `#归档`
 - **硬件匹配**：`#可跑Mac` `#可跑Ubuntu`
 - 可补充更贴切的具体标签（如 `#docker`、`#自托管`）。

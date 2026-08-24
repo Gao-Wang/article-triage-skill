@@ -32,9 +32,13 @@ function loadEnv() {
 }
 
 const env = loadEnv();
-const BASE = (env.READEK_URL || "http://192.168.0.10:8080").replace(/\/$/, "");
+const BASE = (env.READEK_URL || "").replace(/\/$/, "");
 const TOKEN = env.READEK_TOKEN || "";
 
+if (!BASE) {
+  console.error("缺少 READEK_URL（~/.hermes/.env 或环境变量）");
+  process.exit(1);
+}
 if (!TOKEN) {
   console.error("缺少 READEK_TOKEN（~/.hermes/.env 或环境变量）");
   process.exit(1);

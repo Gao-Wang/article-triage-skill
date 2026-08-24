@@ -1,0 +1,8 @@
+# 个性化配置（从 example 复制后填写，不入库）
+profile.md
+USER.md
+.env
+
+# 备份与系统文件
+*.bak-*
+.DS_Store
